@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Input Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    background-image: url(ok2.jpeg);
+    background-size: cover;
+
+}
+
+.form-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+.input-group:hover,.input-group:focus{
+    transform: translate(-3px);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #1d7520;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #85b787;
+}
+
+    </style>
+</head>
+<body >
+    <div class="form-container" style="background-color: rgb(125, 192, 154);">
+        <h2>Agriculture Input Form</h2>
+        <form id="input-form">
+            <div class="input-group">
+                <label for="state">State Name:</label>
+                <input type="text" id="hello" name="state" required>
+                <select name="state" id="state">
+                    <option value=" ">--Select--</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Bihar">Bihar</option>
+
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="soil-type">Soil Type:</label>
+                <input type="text" id="soil-type" name="soil-type" required>
+                <select name="soliType" id="SoilType">
+                    <option value="">--Select--</option>
+                    <option value="Sandy soil">Sandy Soil</option>
+                    <option value="Clay soil">Clay Soil</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="season">Season:</label>
+                <input type="text" id="season1" name="season" required>
+                <select name="season" id="season">
+                    <option value="">--Select--</option>
+                    <option value="Summer">Summer</option>
+                    <option value="Winter">Winter</option>
+                </select>
+
+            </div>
+            <div class="input-group">
+                <button type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        const dropdown = document.getElementById('state');
+        const inputBox = document.getElementById('hello');
+    
+        dropdown.addEventListener('change', function() {
+            const selectedOption = dropdown.value;
+            inputBox.value = selectedOption;
+        });
+
+        const dropdown1 = document.getElementById('SoilType');
+        const inputBox1 = document.getElementById('soil-type');
+    
+        dropdown1.addEventListener('change', function() {
+            const selectedOption1 = dropdown1.value;
+            inputBox1.value = selectedOption1;
+        });
+
+        const dropdown2 = document.getElementById('season');
+        const inputBox2 = document.getElementById('season1');
+    
+        dropdown2.addEventListener('change', function() {
+            const selectedOption2 = dropdown2.value;
+            inputBox2.value = selectedOption2;
+        });
+
+        document.getElementById('input-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const state = document.getElementById('state').value;
+            const soilType = document.getElementById('SoilType').value;
+            const season = document.getElementById('season').value;
+
+            let link = '';
+            console.log('State:', state);
+            console.log('Soil Type:', soilType);
+            console.log('Season:', season);
+            
+            if (state === 'Rajasthan' && soilType === 'Sandy soil' && season === 'Summer') {
+                link = 'https://www.quora.com/Thar-Desert-in-Rajasthan-has-millions-of-tons-of-sandy-soil-Why-is-this-sand-not-used-in-construction-activities-all-over-India';
+            }
+
+            else if(state === 'Rajasthan' && soilType === 'Clay soil' && season === 'Summer'){
+                link = 'https://rajras.in/rajasthan/geography/soils/';
+            }
+
+            else if(state === 'Rajasthan' && soilType === 'Clay soil' && season === 'Winter'){
+                link = 'https://insa.nic.in/writereaddata/UpLoadedFiles/PINSA/Vol44B_1978_4_Art01.pdf';
+            }
+
+            else if(state === 'Rajasthan' && soilType === 'Sandy soil' && season === 'Winter'){
+                link = 'https://www.agrifarming.in/crops-suitable-for-sandy-soil-a-full-guide';
+            }
+
+            else if(state === 'Uttar Pradesh' && soilType === 'Sandy soil' && season === 'Summer'){
+                link = 'https://testbook.com/up-gk/types-of-soil-in-uttar-pradesh';
+            }
+
+            else if(state === 'Uttar Pradesh' && soilType === 'Sandy soil' && season === 'Winter'){
+                link = 'https://www.mapsofindia.com/maps/india/soilsofindia.htm';
+            }
+
+            else if(state === 'Uttar Pradesh' && soilType === 'Clay soil' && season === 'Summer'){
+                link = 'https://www.quora.com/What-are-the-types-of-soils-found-in-Uttar-Pradesh';
+            }
+
+            else if(state === 'Uttar Pradesh' && soilType === 'Clay soil' && season === 'Winter'){
+                link = 'https://lotusarise.com/psc/soils-of-uttar-pradesh-uppsc/';
+            }
+
+            
+            else if(state === 'Haryana' && soilType === 'Sandy soil' && season === 'Summer'){
+                link = 'https://haryana.pscnotes.com/haryana-geography/soils-of-haryana/';
+            }
+
+            else if(state === 'Haryana' && soilType === 'Sandy soil' && season === 'Winter'){
+                link = 'https://haryana.gov.in/geography/';
+            }
+
+            
+            else if(state === 'Haryana' && soilType === 'Clay soil' && season === 'Winter'){
+                link = 'https://cdnbbsr.s3waas.gov.in/s3d79c6256b9bdac53a55801a066b70da3/uploads/2020/10/2020101244-1.pdf';
+            }
+
+            
+            else if(state === 'Haryana' && soilType === 'Clay soil' && season === 'Summer'){
+                link = 'https://www.agrifarming.in/suitable-crops-for-clay-soil-clay-soil-properties';
+            }
+
+            
+            else if(state === 'Bihar' && soilType === 'Sandy soil' && season === 'Summer'){
+                link = 'https://bihar.pscnotes.com/bihar-geography/bihar-soils/';
+            }
+
+            else if(state === 'Bihar' && soilType === 'Sandy soil' && season === 'Winter'){
+                link = 'https://testbook.com/bihar-gk/soil-in-bihar';
+            }
+
+            else if(state === 'Bihar' && soilType === 'Clay soil' && season === 'Summer'){
+                link = 'https://www.csejunction.com/2020/08/soils-in-bihar.html';
+            }
+
+            else if(state === 'Bihar' && soilType === 'Clay soil' && season === 'Winter'){
+                link = 'https://www.thespruce.com/understanding-and-improving-clay-soil-2539857';
+            }
+
+            else {
+
+                alert('No information available for the selected inputs.');
+            }
+            window.open(link, '_blank');
+
+        });
+    </script>
+</body>
+</html>

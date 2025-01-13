@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Agricultural Website</title>
+  <script src="hack.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  <style>
+    footer{
+    margin-top: 15px;
+}
+
+.foot-panal1{
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+.foot-panal2{
+    background-color: #222f3d;
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul{
+    margin-top: 20px;
+}
+ul a{
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+}
+.foot-panal3{
+    background-color: #222f3d;
+    color: white;
+    border-top: 0.5px solid white;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo1{
+    background-image: url("amazon_logo3.jpg");
+    background-size: cover;
+    height: 50px;
+    width: 100px;
+}
+.foot-panal4{
+    background-color: #0f1111;
+    color: rgb(255, 250, 250);
+    height: 80px;
+    font-size: 0.7rem;
+    text-align: center;
+    
+}
+.pages{
+    padding-top: 25px;
+}
+.copyright{
+   padding-top: 5px;
+}
+    .container {
+      text-align: center; 
+    }
+
+    .box1 li
+    {
+        display: inline-block;
+    }
+    .zoom-image {
+        display: inline-block;
+        animation: zoom-in-zoom 1s ease infinite;
+    }
+    .firstnav{
+            overflow: hidden;
+            position: relative;
+            background: #000;
+            width: 100%;
+            z-index: 1;
+        }
+    .firstnav a{
+            margin-right: 28px;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 10px 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    @keyframes zoom-in-zoom{
+            0%{
+                transform: scale(1,1);
+            }
+            50%{
+                transform: scale(1,1);
+            }
+            100%{
+                transform: scale(1,1);
+            }
+        }
+        nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+.navbar1{
+                background-color: #050101;
+                overflow: hidden;
+                text-align: center;
+                width: 100%;
+                
+            }
+
+            .navbar1 a {
+                float: left;
+                display: block;
+                color: rgb(5, 1, 1);
+                text-align: left;
+                padding: 1px;
+                text-decoration: none;
+            }
+            .navbar1 a:hover {
+                background-color: #ddd;
+                color: rgb(233, 227, 227);
+            }
+
+            .navbar1 li
+            {
+                margin-right: 10px;
+                display: inline-block;
+            }
+            body {
+                background-image: url('ok.jpeg');
+                background-size: cover; /* Ensures the image covers the entire background */
+                background-repeat: no-repeat; /* Prevents the image from repeating */
+            }
+  .demo
+  {
+    color: white;
+  }
+  #contact
+  {
+    color: white;
+  }
+  #footer
+  {
+    color: rgb(209, 73, 73);
+  }
+  .container1 {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        box-sizing: border-box;
+        width: calc(50% - 10px);
+        padding: 20px;
+    }
+    .ok
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .zoom-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        animation: zoom-in-zoom1 1s ease infinite;
+       
+    }
+    @keyframes zoom-in-zoom1{
+            0%{
+                transform: scale(1,1);
+            }
+            50%{
+                transform: scale(1.5,1.5);
+            }
+            100%{
+                transform: scale(1,1);
+            }
+        }
+    .container-wrapper {
+    display: flex;
+    gap: 20px; 
+    }
+    .container11{
+        flex: 1;
+        border: 1px solid #ccc; 
+        padding: 20px;
+        height: 300px;
+        width: 200px;
+        background-image: url("ok3.jpg");
+        background-size: cover;
+   
+    }
+    .container12{
+        flex: 1;
+        border: 1px solid #ccc; 
+        padding: 20px;
+        height: 300px;
+        width: 200px;
+        background-image: url("test.jpg");
+        background-size: cover;
+    }
+    .test1{
+    position: absolute;
+    justify-content: center;
+    align-items: right;
+    }
+    section{
+        color: white;
+    }
+    
+  </style>
+</head>
+<body  bgcolor="silver" ng-controller="myCtrl">
+    <div class="navbar1">
+        <ul>
+            <li><a href="#"><img src="ok9.jpeg" alt="" width="200" height="120"></a></li>
+            </ul>
+    </div>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#footer">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#footer">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+  <main>
+    <section id="hero">
+      <h1 style="text-align: center;">Welcome to the Government Agricultural Website</h1>
+      <p style="text-align: center;">Empowering farmers and promoting sustainable agriculture.</p>
+    </section>
+    <div class="container">
+        <img src="360_F_622576324_LDZSnjbh7bofz8kjeNQmtDB0TQNf9DeT.webp" alt="Zoom Image" class="zoom-image" width="1200">
+    </div>
+    <br><br>
+    <div class="ok">
+    <div class="container1">
+        <div class="box">
+            <p><h2><font color="white">Agriculture Information</font></h2>
+                <p style="color: white;">Agriculture, with its allied sectors, is unquestionably the largest livelihood provider in India, more so in the vast rural areas. It also contributes a significant figure to the Gross Domestic Product (GDP). Sustainable agriculture, in terms of food security, rural employment, and environmentally sustainable technologies such as soil conservation, sustainable natural resource management and biodiversity protection, are essential for holistic rural development.</p></p>
+        </div>
+    </div>
+    <button ng-click="redirectToWebsite()" class="zoom-btn">Click here!</button>
+    </div>
+    <br><br>
+    <div class="container-wrapper" >
+        <div class="container11 " id="test1" style="background-color: white;">
+            
+            <h2><font color="black">Our Services</font></h2>
+            <p><font color="black"><section id="services">
+                <ul>
+                  <li>Agri-Extension Services</li>
+                  <li>Farm Equipment Loans</li>
+                  <li>Training Programs</li>
+                  <li>Market Information</li>
+                </ul>
+              </section></font></p>
+        </div>
+        <div class="container12 " id="test2" style="background-color: white;">
+            
+            <h2><font color="black">Resources</font></h2>
+            <p><font color="black">The application will undergo deployment on various online platforms, including agencies specializing in digital services. Following this, thorough ground testing will be conducted to ensure its functionality and reliability.</font></p>
+        </div>
+    </div>
+</div>
+  </main>
+  <footer id="footer">
+    <div class="foot-panal1">
+        Back to Top
+    </div>
+    <div class="foot-panal2">
+        <ul>
+            <p>About Us</p>
+            <a>Blogs</a>
+            <a>About Our Site</a>
+            <a>Investors Relation</a>
+            <a>Information</a>
+            <a>Science</a>
+        </ul>
+        <ul>
+            <p>Policy Information</p>
+            <a>Policy Status</a>
+            <a>Policy Review</a>
+            <a>Issues</a>
+            <a>Amazon Devices</a>
+            <a>Amazon Science</a>
+        </ul>
+        <ul>
+            <p>Govt Information </p>
+            <a>Consitution Of India</a>
+            <a>Indian Parliament</a>
+            <a>Publications</a>
+            <a>Cabinet Ministers</a>
+        </ul>
+        <ul>
+            <p>Contact Us</p>
+            <a>Email: info@example.com</a>
+            <a>Phone: +1-123-456-7890</a>
+        </ul>
+    </div>
+    
+    <div class="foot-panal3">
+        <div class="logo1"></div>
+    </div>
+    <div class="foot-panal4">
+        <div class="pages">
+            <a>Condition in Use</a>
+            <a>Privacy Notice</a>
+            <a>Your Ads Privacy ChoicesS</a>
+        </div>
+        <div class="copyright">
+            2024 Government Agricultural Website. All rights reserved.
+        </div>
+    </div>
+    <script>
+        angular.module('myApp', [])
+        .controller('myCtrl', function($scope, $window) {
+        $scope.redirectToWebsite = function() {
+        $window.open('adriculture.html', '_blank');
+    };
+  });
+    </script>
+</footer>
+</body>
+</html>

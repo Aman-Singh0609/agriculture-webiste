@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Sign Up</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+            background-color: black; /* Changed background color to black */
+            background-image: url('https://imgs.search.brave.com/f7Lom6Xur_U3Lk7kRhWa7Cpaf62puR-ElUK__HDZ5fk/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMC8w/Ny8yMy8wMS8wOS9m/aWVsZC01NDMwMDcw/XzY0MC5qcGc');
+        }
+        .bg-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            background-image: url('https://imgs.search.brave.com/QIzB56RzJES8MwLKF1ZFgbi1XYOS42k9Gu0GHL3Ii_c/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/YWdyb25vbWFnLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Mi8wNC9Db29wZXJh/dGl2ZS1GYXJtaW5n/LmpwZw'); /* Add your farmer group image URL here */
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        input[type="text"], input[type="email"], input[type="password"], select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: white; /* Changed text color to white */
+            background-color: red;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="container">
+        <h1>Farmer Sign Up</h1>
+        <form id="signup-form" action="/signup" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="Password" required>
+
+            <label for="govtIdType"><font color="white">Government ID Type</font></label>
+            <select id="govtIdType" name="govtIdType" required>
+                <option value="aadhar">Aadhar Card</option>
+                <option value="pan">PAN Card</option>
+                <option value="drivingLicense">Driving License</option>
+            </select>
+
+            <label for="govtId"><font color="white">Government ID Number</font></label>
+            <input type="text" id="govtId" name="GovtId" required>
+
+            <label for="verifyGovtId"><font color="white">Verify Phone Number</font></label>
+            <input type="text" id="verifyGovtId" name="verifyGovtId" required>
+
+            <button type="submit" name="submit">Sign Up</button>
+        </form>
+        <div class="footer">
+            <font color="white">Already have an account? </font><a href="login1.html"><font color="white">Log In</font></a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            var username = document.getElementById('name').value;
+            alert('Welcome, ' + username + '!'); 
+        });
+    </script>
+</body>
+</html>
